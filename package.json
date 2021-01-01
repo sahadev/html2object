@@ -1,6 +1,6 @@
 {
   "name": "html2object",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "parse html to object, convert object to html",
   "main": "./dist/bundle-common.js",
   "scripts": {

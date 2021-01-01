@@ -61,7 +61,7 @@ html2Object("<div><span>This is span</span></div>")
 ## Note
 
 1. The each node is builded as this construct:
-```json
+```
 {
     tagName: {
         attribute1Key: attribute1Value,
@@ -74,7 +74,7 @@ html2Object("<div><span>This is span</span></div>")
 }
 ```
 2. The root Node is always wraped by 'root' node. Like this:
-```json
+```
 {
     "root": {
         "__children": [
