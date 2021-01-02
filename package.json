@@ -1,6 +1,6 @@
 {
   "name": "html2object",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "parse html to object, convert object to html",
   "main": "./dist/bundle-common.js",
   "scripts": {
@@ -16,5 +16,14 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/sahadev/html2object.git"
-  }
+  },
+  "keywords": [
+    "html",
+    "parser",
+    "generator",
+    "changer",
+    "JavaScript Object",
+    "interchange",
+    "fast"
+  ]
 }
