@@ -97,4 +97,4 @@ so you should be access your actual node by this: ```jsobject.root.__children[0]
 
 Because of the library 'fast-xml-parser' is focus to parse xml. Which parse html have a lot of problem. So I have to change the implement of html parse. 
 
-> Write in 2021-01-04：I found a very powerful library that very similar with html2object in today, I'm very puzzled why I did't find this library in start. This powerful library is parse5. Please try it in deed.
+> Write in 2021-01-04：I found a very powerful library that very similar with html2object in today, I'm very puzzled why I did't find this library in start. This powerful library is parse5. Please try it in deed. But parse5 can't replace html2object totally. html2object is use to parse *.vue file, It can retain any original property, such as 'v-else' 'scoped' and so on. But parse5 would be serialize 'v-else' as 'v-else=""'.
