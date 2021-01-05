@@ -2,6 +2,8 @@
 
 This library is used to parse html into javascript object, or to convert javascript object into html.
 
+> This library is work on SFC file(*.vue) too. 
+
 ## How to use
 
 ### Install
@@ -12,7 +14,7 @@ and in your code:
 ```js
 const { html2Object, object2Html } = require("html2object");
 
-html2Object("<div><span>This is span</span></div>")
+html2Object("<div label><span>This is span</span></div>")
   .then((object) => {
     const json = JSON.stringify(object);
     console.info(json);
@@ -22,6 +24,7 @@ html2Object("<div><span>This is span</span></div>")
     //         "__children": [
     //             {
     //                 "div": {
+    //                     "label": "",
     //                     "__children": [
     //                         {
     //                             "span": {
@@ -38,7 +41,10 @@ html2Object("<div><span>This is span</span></div>")
 
     // modify object property
     const anotherSpanNode = {
-      span: { __text__: "This is another span" },
+      span: { 
+        __text__: "This is another span", 
+        class: "class-name" 
+      },
     };
     object.root.__children[0].div.__children.push(anotherSpanNode);
 
@@ -47,12 +53,12 @@ html2Object("<div><span>This is span</span></div>")
   .then((html) => {
     console.info(html);
     // output:
-    // <div>
+    // <div label>
     //     <span>
-    //         This is span 
+    //         This is span
     //     </span>
-    //     <span>
-    //         This is another span 
+    //     <span class="class-name">
+    //         This is another span
     //     </span>
     // </div>
   });
